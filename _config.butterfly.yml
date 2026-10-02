@@ -953,9 +953,9 @@ instantpage: false
 # Lazyload
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
-  enable: false
-  # Use browser's native lazyload instead of vanilla-lazyload
-  native: false
+  enable: true
+  # 用浏览器原生 loading="lazy"，不额外加载 JS
+  native: true
   # Specify the field to use lazyload (site or post)
   field: site
   placeholder:
