@@ -15,5 +15,5 @@ date: 2026-10-02 13:30:00
 
 ## 联系我
 
-- Email：you@example.com
-- GitHub：https://github.com/Yuu
+- Email：196817265@qq.com
+- GitHub：https://github.com/zhiaixiaojuanheyu521-pixel
