@@ -51,7 +51,7 @@ favicon: /img/favicon.svg
 
 avatar:
   img: /img/tx.jpg
-  effect: true
+  effect: false
 
 disable_top_img: false
 
