@@ -7,7 +7,7 @@ tags:
 categories:
   - 技术
 description: 记录用 Hexo + Butterfly 主题搭建博客的完整过程，以及过程中遇到的一些小坑。
-cover: /img/default_cover.svg
+cover: /img/cover-tech.svg
 ---
 
 把搭建过程完整记一遍，方便以后换机器重来。

@@ -1,0 +1,148 @@
+/* ==========================================================
+   Yuu 博客 · 紫色主题
+   Butterfly 用 CSS 变量定义配色，所以直接覆盖变量最干净，
+   不会跟主题的其它样式打架。
+   本文件在主题样式之后加载，同优先级下后者胜出。
+   ========================================================== */
+
+/* ---------------- 浅色模式 ---------------- */
+:root {
+  --global-bg:        #F8F5FE;
+  --font-color:       #3B3352;
+  --text-highlight-color: #2A2340;
+  --card-bg:          #FFFFFF;
+  --card-meta:        #8B82A6;
+
+  --search-bg:        #F3EEFC;
+  --search-input-color: #3B3352;
+  --search-a-color:   #3B3352;
+
+  --sidebar-bg:       #F3EEFC;
+  --sidebar-menu-bg:  #FFFFFF;
+
+  --btn-bg:           #A06BFF;
+  --btn-hover-color:  #7B4BE0;
+  --text-bg-hover:    rgba(160, 107, 255, .65);
+
+  --hr-border:        #DCCBFF;
+  --hr-before-color:  #C4A2FF;
+
+  --blockquote-bg:    rgba(160, 107, 255, .10);
+  --blockquote-color: #6A6382;
+
+  --toc-link-color:   #6B6383;
+  --scrollbar-color:  #A06BFF;
+  --default-bg-color: #A06BFF;
+  --pseudo-hover:     #8A4DFF;
+
+  --tab-border-color:      #EDE5FB;
+  --tab-button-bg:         #F0EAFB;
+  --tab-button-color:      #3B3352;
+  --tab-button-hover-bg:   #E2D6F8;
+  --tab-button-active-bg:  #FFFFFF;
+
+  --card-box-shadow:       0 3px 8px 6px rgba(90, 60, 160, .06);
+  --card-hover-box-shadow: 0 3px 8px 6px rgba(90, 60, 160, .14);
+}
+
+/* ---------------- 暗色模式（站点默认） ---------------- */
+[data-theme='dark'] {
+  --global-bg:        #100B1C;   /* 带紫调的近黑，替代原来的纯灰 #0d0d0d */
+  --font-color:       rgba(233, 227, 252, .74);
+  --text-highlight-color: rgba(242, 238, 255, .95);
+  --card-bg:          #1A1428;
+  --card-meta:        #9A8FB8;
+
+  --search-bg:        #1A1428;
+  --search-input-color: rgba(233, 227, 252, .74);
+  --search-a-color:   rgba(233, 227, 252, .74);
+
+  --sidebar-bg:       #1A1428;
+  --sidebar-menu-bg:  #241C36;
+
+  --btn-bg:           #241C36;
+  --btn-hover-color:  #8A6BD0;
+  --text-bg-hover:    #33274A;
+
+  --hr-border:        rgba(196, 162, 255, .34);
+  --hr-before-color:  rgba(196, 162, 255, .70);
+
+  --blockquote-bg:    #241C36;
+  --blockquote-color: rgba(233, 227, 252, .70);
+
+  --toc-link-color:   rgba(220, 210, 255, .62);
+  --scrollbar-color:  #6B4FA8;
+
+  --tab-border-color:     #33274A;
+  --tab-button-bg:        #241C36;
+  --tab-button-color:     rgba(233, 227, 252, .74);
+  --tab-button-hover-bg:  #33274A;
+  --tab-button-active-bg: #1A1428;
+
+  --timeline-bg:      #241C36;
+  --reward-pop:       #241C36;
+  --zoom-bg:          #1A1428;
+  --mark-bg:          rgba(160, 107, 255, .26);
+
+  /* 代码块 */
+  --hl-bg:            #191228;
+  --hltools-bg:       #221A33;
+  --hltools-color:    #B9AEE0;
+  --hlnumber-bg:      #191228;
+  --hlnumber-color:   rgba(233, 227, 252, .38);
+  --hlscrollbar-bg:   #2A2040;
+  --hlexpand-bg:      linear-gradient(180deg, rgba(25, 18, 40, .6), rgba(25, 18, 40, .9));
+}
+
+/* ---------------- 环境光：顶部一层紫色辉光 ---------------- */
+[data-theme='dark'] body {
+  background-image:
+    radial-gradient(ellipse 90% 55% at 50% -12%, rgba(130, 80, 220, .20), transparent 72%),
+    radial-gradient(ellipse 70% 45% at 105% 102%, rgba(90, 60, 170, .13), transparent 72%);
+}
+body {
+  background-image:
+    radial-gradient(ellipse 90% 55% at 50% -12%, rgba(160, 107, 255, .13), transparent 72%);
+}
+
+/* ---------------- 卡片悬浮：紫色描边 + 轻微上浮 ---------------- */
+#recent-posts .recent-post-item,
+#aside-content .card-widget {
+  transition: box-shadow .3s ease, transform .3s ease, border-color .3s ease;
+}
+#recent-posts .recent-post-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(160, 107, 255, .45);
+}
+[data-theme='dark'] #recent-posts .recent-post-item {
+  border: 1px solid rgba(160, 107, 255, .12);
+}
+[data-theme='dark'] #recent-posts .recent-post-item:hover {
+  border-color: rgba(160, 107, 255, .40);
+}
+
+/* ---------------- 大图卡片（index_layout: 4）微调 ---------------- */
+/* 封面加高一点，让"大图"更明显；标题也跟着放大 */
+#recent-posts .recent-post-item .post_cover {
+  height: 260px;
+}
+#recent-posts .recent-post-item .post_cover img {
+  transition: transform .6s cubic-bezier(.22, .61, .36, 1);
+}
+#recent-posts .recent-post-item:hover .post_cover img {
+  transform: scale(1.06);
+}
+#recent-posts .recent-post-item .recent-post-info .article-title {
+  font-size: 1.32em;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  #recent-posts .recent-post-item .post_cover { height: 190px; }
+}
+
+/* ---------------- 主题 theme_color 覆盖不到的硬编码颜色 ----------------
+   只有两处：主题里写死了颜色，不受 theme_color 控制。
+   （评论切换按钮那几处也是写死的，但只有配置了两套评论系统时才会渲染，
+     本站只用 Twikoo，所以不写，避免死代码） */
+#recent-posts .recent-post-item > .recent-post-info > .article-title .sticky { color: #C4A2FF; }
+.search-keyword { color: #E3B7FF; }

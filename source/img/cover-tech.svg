@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0C0818"/>
+      <stop offset="50%"  stop-color="#2E1F5E"/>
+      <stop offset="100%" stop-color="#6C4AD8"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#C9A8FF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#C9A8FF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0 L0 0 0 80" fill="none" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg2)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1180" cy="260" r="360" fill="url(#orb)"/>
+  <circle cx="1180" cy="260" r="150" fill="none" stroke="#C9A8FF" stroke-opacity="0.30" stroke-width="2"/>
+  <circle cx="1180" cy="260" r="230" fill="none" stroke="#C9A8FF" stroke-opacity="0.16" stroke-width="2"/>
+  <g stroke="#C9A8FF" stroke-opacity="0.22" stroke-width="2" fill="none">
+    <path d="M120 700 L 320 560 L 520 700 L 720 560"/>
+    <path d="M120 780 L 320 640 L 520 780 L 720 640"/>
+  </g>
+  <circle cx="320" cy="560" r="7" fill="#C9A8FF" fill-opacity="0.75"/>
+  <circle cx="520" cy="700" r="5" fill="#C9A8FF" fill-opacity="0.55"/>
+</svg>
