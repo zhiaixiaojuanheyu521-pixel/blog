@@ -54,6 +54,7 @@ hexo clean && hexo generate   # 生成静态页面到 public/
 - 配色：**紫色系**，主色 `#A06BFF`。分两层，见 `docs/紫色主题与卡片布局.md`
 - 首页：**大图卡片**（`index_layout: 4`，封面在上信息在下）
 - 自定义样式：`source/css/yuu-purple.css`，删掉即恢复主题默认外观
+- 顶部背景：**星空图**（`source/img/starry-sky.jpg`），见 `docs/星空背景.md`
 
 > ⚠️ 改 `_config.butterfly.yml` 里的 `theme_color` 后必须 `hexo clean && hexo generate`，
 > 因为颜色是编译期通过 Stylus 注入的。

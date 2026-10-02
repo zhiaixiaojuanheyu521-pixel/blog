@@ -41,6 +41,8 @@
   --tab-button-hover-bg:   #E2D6F8;
   --tab-button-active-bg:  #FFFFFF;
 
+  --mark-bg:          rgba(8, 5, 16, .32);   /* 浅色模式下 banner 也用同款蒙版，保持星空一致 */
+
   --card-box-shadow:       0 3px 8px 6px rgba(90, 60, 160, .06);
   --card-hover-box-shadow: 0 3px 8px 6px rgba(90, 60, 160, .14);
 }
@@ -82,7 +84,7 @@
   --timeline-bg:      #241C36;
   --reward-pop:       #241C36;
   --zoom-bg:          #1A1428;
-  --mark-bg:          rgba(160, 107, 255, .26);
+  --mark-bg:          rgba(8, 5, 16, .32);   /* banner 上的蒙版：压暗但不冲淡星空 */
 
   /* 代码块 */
   --hl-bg:            #191228;
