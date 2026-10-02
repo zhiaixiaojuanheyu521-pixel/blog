@@ -123,3 +123,61 @@ Cloudflare 会自动配好 DNS 和 HTTPS 证书。
 ## 备案
 
 **不用备案。** Cloudflare Pages 是境外服务，只有服务器在中国大陆才需要 ICP 备案。
+
+
+---
+
+## 补充：修掉「软 404」
+
+部署完成后实测发现一个 SEO 隐患：**访问不存在的路径，返回的是 HTTP 200 + 首页内容**。
+
+```
+/this-page-does-not-exist-12345/  →  HTTP 200, 21709 字节（和首页一样）
+```
+
+这是 Cloudflare Pages 的默认回退行为。搜索引擎会因此索引出无数个重复页面。
+
+**修法**：在产物根目录放一个 `404.html`，Pages 就会用它响应未匹配的请求（并返回 404 状态码）。
+
+Hexo + Butterfly 的做法：
+
+1. `_config.butterfly.yml` 里启用：
+   ```yaml
+   error_404:
+     enable: true
+     subtitle: '这个页面走丢了'
+     background: /img/error-page.png
+   ```
+
+2. 建 `source/404/index.md`：
+   ```yaml
+   ---
+   title: 404
+   type: '404'          # ⚠️ 引号必须加
+   permalink: /404.html
+   comments: false
+   top_img: false
+   ---
+   ```
+
+### ⚠️ 踩的坑：`type: '404'` 的引号不能省
+
+写成 `type: 404`（不加引号）时，YAML 会把它解析成**整数 404**，
+而主题模板 `page.pug` 里判断的是**字符串**：
+
+```pug
+case page.type
+  when '404'
+    include includes/page/404.pug
+```
+
+整数和字符串永远不相等 → 走了 `default` 分支 → 404 页面渲染成普通页面，
+没有大号 404 数字、没有副标题，**而且不会报任何错**。
+
+验证方法：看产物里 `public/404.html` 有没有 `error_title` 这个 class。
+
+### 验证结果（修复前 / 修复后）
+
+| | 修复前 | 修复后 |
+| --- | --- | --- |
+| 不存在的路径 | HTTP 200 + 首页 | HTTP 404 + 404 页 |
