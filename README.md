@@ -44,6 +44,11 @@ hexo clean && hexo generate   # 生成静态页面到 public/
 | `/message/` | 留言板，评论用 Twikoo（后端待部署） |
 | `/about/` | 关于我 |
 
+## 入场画面
+
+打开博客会全屏播放一段开场动画（详见 `source/intro/README.md`）。
+不想要了就把 `_config.butterfly.yml` 里 `inject` 下的三条内容清空。
+
 ## 部署
 
 ### 方式一：自己的服务器（VPS）
