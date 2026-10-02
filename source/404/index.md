@@ -1,7 +1,7 @@
 ---
 title: 404
 date: 2026-10-03 00:55:00
-type: 404
+type: '404'
 permalink: /404.html
 comments: false
 top_img: false
