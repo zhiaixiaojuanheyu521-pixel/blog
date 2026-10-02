@@ -7,7 +7,6 @@ tags:
   - MD5
   - 哈希
   - PHP
-  - CTF
 description: 青岑 CTF 的 MD5 相关题解，包含弱比较（0e 绕过）、数组绕过、强碰撞以及 SHA-1 绕过。
 cover: /img/cover-tech.svg
 comments: true
