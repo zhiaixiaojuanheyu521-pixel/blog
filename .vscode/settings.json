@@ -1,0 +1,26 @@
+{
+  // 把生成物和依赖从文件树里藏起来，不然侧边栏几万个文件没法看
+  "files.exclude": {
+    "node_modules": true,
+    "public": true,
+    ".deploy_git": true,
+    "db.json": true
+  },
+  // 搜索也排除掉，Ctrl+Shift+F 才不会被依赖包的结果淹没
+  "search.exclude": {
+    "node_modules": true,
+    "public": true,
+    "package-lock.json": true
+  },
+  // 用 vscode 的 markdown 预览看文章效果（Ctrl+K V）
+  "markdown.preview.fontSize": 15,
+  "editor.wordWrap": "on",
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
+  // 前台文件编码统一 UTF-8，避免中文乱码
+  "files.encoding": "utf8"
+}
