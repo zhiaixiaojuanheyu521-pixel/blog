@@ -1,0 +1,15 @@
+- class_name: 友情链接
+  class_desc: 一些人，一些站
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/
+      avatar: /img/friends/hexo.svg
+      descr: 快速、简洁且高效的博客框架
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: /img/friends/butterfly.svg
+      descr: 本站使用的主题，文档很全
+    - name: 申请友链
+      link: /message/
+      avatar: /img/friends/apply.svg
+      descr: 点这里去留言板申请交换友链

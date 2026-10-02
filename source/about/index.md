@@ -3,7 +3,7 @@ title: 关于我
 date: 2026-10-02 13:30:00
 ---
 
-## 你好，我是 qiayu 👋
+## 你好，我是 Yuu 👋
 
 这里是我的个人博客，用来记录学习笔记、踩坑经历和生活碎片。
 
@@ -16,4 +16,4 @@ date: 2026-10-02 13:30:00
 ## 联系我
 
 - Email：you@example.com
-- GitHub：https://github.com/yourname
+- GitHub：https://github.com/Yuu

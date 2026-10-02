@@ -1,0 +1,31 @@
+# Twikoo 评论后端（自建版）
+#
+# 本地试玩：
+#   cd deploy/twikoo && docker compose up -d
+#   然后把 _config.butterfly.yml 里的 twikoo.envId 填 http://localhost:8081
+#
+# 放到 VPS 上：
+#   1. 把本目录传到服务器
+#   2. docker compose up -d
+#   3. 用 nginx 反代 8081 端口到一个子域名，例如 twikoo.yourdomain.com
+#   4. envId 填 https://twikoo.yourdomain.com
+#   5. 记得给这个子域名也配上 HTTPS
+
+services:
+  twikoo:
+    image: imaegoo/twikoo:latest
+    container_name: twikoo
+    restart: unless-stopped
+    ports:
+      - "8081:8080"
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/twikoo
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:4.4
+    container_name: twikoo-mongo
+    restart: unless-stopped
+    volumes:
+      - ./data/mongo:/data/db
