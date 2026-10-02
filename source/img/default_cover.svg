@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="c" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3c72"/>
+      <stop offset="50%" stop-color="#2a5298"/>
+      <stop offset="100%" stop-color="#6a3093"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#c)"/>
+  <circle cx="980" cy="120" r="70" fill="#ffffff" opacity="0.10"/>
+  <circle cx="200" cy="480" r="110" fill="#ffffff" opacity="0.07"/>
+  <text x="600" y="300" font-family="Helvetica,Arial,sans-serif" font-size="64"
+        fill="#ffffff" opacity="0.9" text-anchor="middle" dominant-baseline="central">柒月小站</text>
+</svg>
