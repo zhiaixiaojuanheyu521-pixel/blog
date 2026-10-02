@@ -46,7 +46,7 @@ hexo clean && hexo generate   # 生成静态页面到 public/
 
 ## 入场画面
 
-打开博客会全屏播放一段开场动画（详见 `source/intro/README.md`）。
+打开博客会全屏播放一段开场动画（详见 `docs/入场画面.md`）。
 不想要了就把 `_config.butterfly.yml` 里 `inject` 下的三条内容清空。
 
 ## 部署
