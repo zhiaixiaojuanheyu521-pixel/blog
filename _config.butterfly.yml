@@ -562,13 +562,11 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  # ★★★ 填这里就能用！★★★
-  # 部署好 Twikoo 后端后，把它的访问地址粘到这里，例如：
-  #   envId: https://twikoo.yourdomain.com
-  # 没填之前，留言板评论区是空的（不影响其他功能）
-  # 部署方法见：deploy/twikoo/README.md
-  envId:
+  # Twikoo 后端部署在 Cloudflare Workers + D1，绑定自定义域名
+  # ⚠️ workers.dev 域名在国内被 DNS 污染，必须用自定义域名
+  envId: https://twikoo.yuu-blog.top
   region:
+  # 用 Twikoo 的访客统计作为文章阅读量
   visitor: false
   option:
 
