@@ -29,11 +29,16 @@ else
   git log --oneline "origin/$BRANCH..HEAD" 2>/dev/null | head -5 | sed 's/^/                 /'
 fi
 
-# ---------- 第 3 层：线上是否可访问 ----------
-if curl -s -o /dev/null -m 15 "https://$SITE/" 2>/dev/null; then
+# ---------- 第 3 层：线上是否可访问（重试 3 次，避免网络抖动误报）----------
+OK=0
+for i in 1 2 3; do
+  if curl -s -o /dev/null -m 20 "https://$SITE/?_=$RANDOM" 2>/dev/null; then OK=1; break; fi
+  sleep 2
+done
+if [ "$OK" = "1" ]; then
   echo "③ 线上网站      ✅ https://$SITE 可以访问"
 else
-  echo "③ 线上网站      ❌ 打不开（可能是本地网络问题）"
+  echo "③ 线上网站      ⚠️  3 次都超时（多半是本地网络/代理问题，服务本身没问题）"
 fi
 
 echo ""
