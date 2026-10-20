@@ -1,8 +1,21 @@
+# 系统文件
 .DS_Store
 Thumbs.db
+
+# Hexo 缓存和生成物
 db.json
-*.log
-node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+
+# 依赖
+node_modules/
+
+# 日志
+*.log
+
+# Cloudflare wrangler 缓存
+.wrangler/
+
+# 下载的临时包
+*.tar.xz
