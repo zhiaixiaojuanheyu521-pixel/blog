@@ -5,7 +5,7 @@ categories:
   - 学习
 tags:
   - Linux
-description: 一些liunx的小知识
+description: 一些 Linux 的小知识
 cover: /img/cover-tech.svg
 comments: true
 ---

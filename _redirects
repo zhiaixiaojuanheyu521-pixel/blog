@@ -1,0 +1,6 @@
+# 旧链接重定向（liunx → linux 拼写修正）
+# 格式: 源路径  目标路径  状态码
+/2026/10/liunx/        /2026/10/linux/        301
+/2026/10/liunx         /2026/10/linux/        301
+/2026/10/liunx-yunwei/ /2026/10/linux-yunwei/ 301
+/2026/10/liunx-yunwei  /2026/10/linux-yunwei/ 301

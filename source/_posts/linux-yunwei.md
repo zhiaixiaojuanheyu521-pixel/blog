@@ -1,11 +1,11 @@
 ---
-title: 运维常用的一些liunx的命令学习
+title: 运维常用的一些 Linux 命令学习
 date: 2026-10-27 18:24:57
 categories:
-  - liunx
+  - Linux
 tags:
-  - liunx
-description: 一些关于运维方面liunx的基础命令
+  - Linux
+description: 一些关于运维方面 Linux 的基础命令
 cover: /img/cover-tech.svg
 comments: true
 ---
